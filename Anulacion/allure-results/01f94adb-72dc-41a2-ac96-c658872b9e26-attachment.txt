@@ -1,0 +1,15 @@
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+
+// captura la variable code es igual a 1015
+const responseJson = pm.response.json();
+const code = responseJson.errors[0].code;
+const codenum = Number(code);
+pm.environment.set("codenum", codenum);
+
+pm.test("La variable de entorno 'code' es 1015", function () {
+  pm.expect(codenum).to.equal(1015); // Verifica si la variable es igual a 1015
+});
+// Imprimir el comentario en la consola de Newman
+console.log("Comentario del caso de prueba: ", pm.iterationData.get("comentario"));

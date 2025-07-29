@@ -1,0 +1,12 @@
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+// captura la variable code es igual a 1013
+const responseJson = pm.response.json();
+const code = responseJson.errors[0].code;
+const codenum = Number(code);
+pm.environment.set("codenum", codenum);
+
+pm.test("La variable de entorno 'code' es 1018", function () {
+  pm.expect(codenum).to.equal(1018); // Verifica si la variable es igual a 400
+});

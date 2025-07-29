@@ -1,0 +1,17 @@
+try {
+    pm.test("Validar versión de protocolo TLS incorrecta", function () {
+        if (pm.response === undefined || pm.response.error) {
+            const errorMessage = pm.response.error || '';
+            if (errorMessage.includes('SSL routines:ssl3_read_bytes:tlsv1 alert protocol')) {
+                pm.expect(true).to.be.true;  // Pasar el test si el error es el esperado
+            } else {
+                pm.expect.fail("El mensaje de error no coincide con el esperado.");
+            }
+        } else {
+            pm.expect.fail("Se esperaba un error de protocolo TLS y no ocurrió.");
+        }
+    });
+} catch (e) {
+    console.error("Error capturado: ", e);
+    pm.expect.fail("Un error inesperado ocurrió durante la ejecución del test.");
+}

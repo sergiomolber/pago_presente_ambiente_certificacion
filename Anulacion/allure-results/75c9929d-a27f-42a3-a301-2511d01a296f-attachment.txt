@@ -1,0 +1,1 @@
+{"transferId":"atfsNhYXiePY7iz","tx_id":"016FpOPkI6yqyLeAm","status":"COMPLETED","type":"REQUEST","created":"2023-11-09T11:56:10-05:00","updated":"2025-02-27T13:17:54.046Z","amount":"116400.00","symbol":"$tin","errorCode":"1013","errorDesc":"Some Desc"}

@@ -1,0 +1,24 @@
+{
+  "package": {
+    "type": "COLLECTION",
+    "createDate": "2023-01-03T23:47:26.186Z",
+    "packageId": "ac798c43-cc45-4e49-a1ba-af46b8a8243e",
+    "sourceId": "65c242c3-1ea6-45c4-a71f-a41538ded408"
+  },
+  "transfers": [
+    {
+      "transferId": "d44e5c38-8ea0-43c2-8607-1d6261e65650",
+      "source": "$573003004001",
+      "target": "wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV",
+      "amount": 100.00,
+      "description": "",
+      "targetBank": "AG1525AXCS",
+      "merchantId": "89dc15a5-6140-4694-804e-531076307041",
+      "sourceChannel": "POS",
+      "sourceId": "d0508e8b-3065-467f-990c-dc1b2aea8944",
+      "createDate": null
+    }
+    
+  ]
+}
+

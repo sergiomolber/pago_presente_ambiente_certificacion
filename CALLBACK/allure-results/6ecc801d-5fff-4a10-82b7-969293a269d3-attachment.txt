@@ -1,0 +1,1 @@
+{"meta":{"messageUid":"54605465046","requestDt":"2024-09-24T11:45:28.020Z","requestAppId":"65274d8ea32d7c1c3410a6b2792c277f"},"statusCode":400,"statusDesc":"Bad Request","errors":[{"code":"1018","detail":"El campo body.transferId es requerido y no se ha encontrado en la petición"}]}

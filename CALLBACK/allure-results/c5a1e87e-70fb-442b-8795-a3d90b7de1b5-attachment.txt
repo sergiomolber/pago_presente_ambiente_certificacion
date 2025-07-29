@@ -1,0 +1,1 @@
+level: log, messages: Comentario del caso de prueba: ,transferId*-Validar-campo TX_ID al enviarlo con datos nulos

@@ -1,0 +1,18 @@
+{
+    "Connection": "Keep-Alive",
+    "Transfer-Encoding": "chunked",
+    "message-uid": "c9813ba4-52ee-4c10-9228-a0268529d626",
+    "api-key": "f494c2f3-2e29-4766-b706-ec9313470472",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Postman-Token": "92a257d1-7ca9-41cc-8d10-eaf2b7b67f61",
+    "Accept-Encoding": "gzip, deflate, br",
+    "X-Client-IP": "10.128.2.1",
+    "X-Global-Transaction-ID": "dd51bf1b681ba03800e26c60",
+    "Content-Type": "application/json",
+    "Cache-Control": "no-store",
+    "Pragma": "no-cache",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Date": "Wed, 07 May 2025 18:02:32 GMT",
+    "Content-Encoding": "gzip"
+}

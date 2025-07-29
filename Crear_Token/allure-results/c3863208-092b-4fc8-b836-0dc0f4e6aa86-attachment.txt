@@ -1,0 +1,4 @@
+pm.test("Status code is 415", function () {
+    pm.response.to.have.status(415);
+});
+ 

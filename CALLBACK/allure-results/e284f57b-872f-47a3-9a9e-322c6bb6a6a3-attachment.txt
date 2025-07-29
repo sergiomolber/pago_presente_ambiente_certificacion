@@ -1,0 +1,15 @@
+pm.test("Validar versión de protocolo TLS incorrecta", function () {
+    // Verificar si la respuesta contiene un error
+    if (pm.response === undefined || pm.response.error) {
+        const errorMessage = pm.response.error || '';
+        // Validar que el error corresponde a TLSV1_ALERT_PROTOCOL_VERSION
+        if (errorMessage.includes('SSL routines:OPENSSL_internal:TLSV1_ALERT_PROTOCOL_VERSION')) {
+            pm.expect(true).to.be.true;  // Pasar el test si el error es el esperado
+        } else {
+            pm.expect.fail("El mensaje de error no coincide con el esperado.");
+        }
+    } else {
+        // Si la solicitud tuvo éxito, fallar el test, ya que se esperaba un error
+        pm.expect.fail("Se esperaba un error de protocolo TLS y no ocurrió.");
+    }
+});

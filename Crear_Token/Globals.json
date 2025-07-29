@@ -1,0 +1,51 @@
+{
+	"id": "a812427a-b9f6-4c03-82a5-18e86f60ed75",
+	"values": [
+		{
+			"key": "base-url",
+			"value": "https://negocios.cert.transfiya.com.co/ach/tx",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "client_id",
+			"value": "96d0762b5eae5b8085f005fadcf4414a",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "client_secret",
+			"value": "c7d672dbb0120cccc747c57c412b2d91",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "client_id_callback",
+			"value": "8023a3ee176d0601da54899d23a1bba7",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "client_secret_callback",
+			"value": "f902f9241d1679afbc3e47a992c24964",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "access_token_callback",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2025-02-19T15:57:41.274Z",
+	"_postman_exported_using": "Postman/11.32.3"
+}

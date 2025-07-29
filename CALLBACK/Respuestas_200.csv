@@ -1,0 +1,19 @@
+﻿created,updated,errorCode,errorDesc,symbol,amount,sourceBank,targetBank,comentario
+null,"""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo Created al enviarlo nulo
+"""2023-12-20T05:58:55.475Z""",null,"""1013""","""Prueba""","""$tin""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo update al enviarlo nulo
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""",null,"""Prueba""","""$tin""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo errorCode  al enviarlo nulo
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""",null,"""$tin""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo errorDesc al enviarlo nulo
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""",null,"""10""","""AG1525AX18""","""AG1525AX17""",Validar campo symbol al enviarlo nulo
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""",null,"""AG1525AX18""","""AG1525AX17""",Validar campo amount al enviarlo con valores nulos
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""""","""AG1525AX18""","""AG1525AX17""",Validar campo amount al enviarlo vacio
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""-10""","""AG1525AX18""","""AG1525AX17""",Validar campo amount al enviarlo con valores negativos
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""0""","""AG1525AX18""","""AG1525AX17""",Validar campo amount al enviarlo con valor 0
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""llkdksksk""","""AG1525AX18""","""AG1525AX17""",Validar campo amount al enviarlo con valores alfabeticos
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90.98765445""","""AG1525AX18""","""AG1525AX17""",Validar campo amount al enviarlo con decimales
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""""","""AG1525AX17""",Validar campo sourceBank al no enviarlo
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""AG1525AX18""","""""",Validar campo targetBank al no enviarlo
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""AG1525AX18""","""AG1525AX17""",Validar al enviar en targetBank y sourceBank correctos
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""A""","""AG1525AX17""",Validar al enviar sourceBank con 1 caracteres
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""AG1525AX18""","""A""",Validar al enviarlo en targetBank con 1 caracteres
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""""","""AG1525AX17""",Validar al enviar sourceBank vacio
+"""2023-12-20T05:58:55.475Z""","""2023-12-20T05:58:55.475Z""","""1013""","""Prueba""","""$tin""","""90""","""AG1525AX18""","""""",Validar al enviarlo en targetBank vacio

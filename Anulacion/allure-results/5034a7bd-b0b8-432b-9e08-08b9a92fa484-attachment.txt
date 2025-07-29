@@ -1,0 +1,1 @@
+{"meta":{"messageUid":"557c868e-b3bb-4049-81a3-e7f53383e0d1","requestDt":"2025-02-27T13:17:59.331Z","requestAppId":"9d8132da5c61f7214e2c7efce6c6d455"},"statusCode":400,"statusDesc":"BAD REQUEST","errors":[{"code":"1015","detail":"La transacción consultada debe estar en estado PENDING"}]}

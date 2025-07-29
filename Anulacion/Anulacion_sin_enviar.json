@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "5cc7dba1-cc3e-47e6-98bc-08ff33adb867",
+		"name": "Anulacion sin enviar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29460625",
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/PAGO-PRESENTE-AUTENTICACION~3f42c9d4-328d-4e07-9bfb-42673fee6924/collection/29460625-5cc7dba1-cc3e-47e6-98bc-08ff33adb867?action=share&source=collection_link&creator=29460625"
+	},
+	"item": [
+		{
+			"name": "sin enviar messageuid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/JCxzMYbp3kWLMFXF7/reject",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"JCxzMYbp3kWLMFXF7",
+						"reject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sin enviar transferId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer//reject",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"",
+						"reject"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

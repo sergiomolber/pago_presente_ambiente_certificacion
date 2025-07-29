@@ -1,0 +1,10 @@
+// Obtiene la respuesta JSON
+const responseJson = pm.response.json();
+const transferId = responseJson.transfersInfo[0].transferId;
+pm.environment.set("transferId", transferId);
+
+// Obtiene la respuesta JSON
+const responseJson1 = pm.response.json();
+const txRef = responseJson1.transfersInfo[0].txRef;
+pm.environment.set("txRef", txRef);
+

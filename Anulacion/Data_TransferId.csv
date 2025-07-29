@@ -1,0 +1,4 @@
+transferId,comentario
+,TransferId-Validar campo  al enviarlo vacio (404) 
+null,TransferId-Validar campo  al enviarlo null (404) 
+hampletu,TransferId-Validar campo al enviarlo incorrecto (404)

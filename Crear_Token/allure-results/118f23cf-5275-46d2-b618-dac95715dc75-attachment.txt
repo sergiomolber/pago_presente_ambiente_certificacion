@@ -1,0 +1,12 @@
+{
+    "transferId":"dbc977ef-1e72-41cd-ae87-fc8714be383b",
+    "tx_id": "XzwutTb9BlZbefE2N",
+    "status": "COMPLETED",
+    "type": "REQUEST",
+    "created": "2023-12-20T05:58:55.475Z",
+    "updated": "2023-12-20T05:58:55.475Z",
+    "amount":"12",
+    "symbol": "$tin",
+
+   "errorDesc": "Prueba"
+}   

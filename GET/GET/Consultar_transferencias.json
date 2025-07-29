@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "c0e8f046-7e46-4691-9dbd-95e416d6046b",
+		"name": "Get Transfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29460625",
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-c0e8f046-7e46-4691-9dbd-95e416d6046b?action=share&source=collection_link&creator=29460625"
+	},
+	"item": [
+		{
+			"name": "Crear transferencia",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Obtiene la respuesta JSON\r",
+							"const responseJson = pm.response.json();\r",
+							"const transferId = responseJson.transfersInfo[0].transferId;\r",
+							"pm.environment.set(\"transferId\", transferId);\r",
+							"\r",
+							"// Obtiene la respuesta JSON\r",
+							"const responseJson1 = pm.response.json();\r",
+							"const txRef = responseJson1.transfersInfo[0].txRef;\r",
+							"pm.environment.set(\"txRef\", txRef);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"package\": {\r\n    \"type\": \"COLLECTION\",\r\n    \"createDate\": \"2024-09-02T09:11:22.974Z\",\r\n    \"packageId\": \"{{$randomUUID}}\",\r\n    \"sourceId\": \"{{$randomUUID}}\"\r\n  },\r\n    \"transfers\": [\r\n        {\r\n            \"transferId\": \"{{$randomUUID}}\",\r\n            \"source\": \"$573001203045\",\r\n            \"target\": \"wSY3wfgrbNWPhmoMH2hE2r1ampaQT2Wmfu\",\r\n            \"amount\": 1000.00,\r\n            \"description\": \"Transferencia pago de compra.\",\r\n            \"targetBank\": \"rojo\",\r\n            \"merchantId\": \"010601557\",\r\n            \"sourceChannel\": \"POS\",\r\n            \"sourceId\": \"transfers.sourceId\",\r\n            \"createDate\": \"2024-09-02T09:11:22.974Z\"\r\n        }\r\n    ]\r\n}\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/packages",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Happy pathc buscar transferencia",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRef}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRef}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar una consulta con un token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRef}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRef}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar una consulta con un token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token1}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRef}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRef}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar una consulta con un tx_ref que no exista",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRe2f}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRe2f}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar una consulta con un tx_ref vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "f494c2f3-2e29-4766-b706-ec9313470472",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar al enviar vacio el campo message-uid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uid",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRef}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRef}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar al no enviar el campo message-uid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uid",
+						"value": "{{$guid}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRef}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRef}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar longitud del campo message-uid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uid",
+						"value": "f494c2f3-2e29-4766-b706-ec93134704723232",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/transfer/{{txRef}}",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfer",
+						"{{txRef}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,1 @@
+{"meta":{"messageUid":"c9813ba4-52ee-4c10-9228-a0268529d626","requestDt":"2025-05-07T13:02:45.716Z","requestAppId":"9d8132da5c61f7214e2c7efce6c6d455"},"statusCode":201,"statusDesc":"CREATED","transfersInfo":[{"transferId":"7f2444a9-f8b2-4ac0-9e9a-b13b7986c1aa","source":"$573003004001","target":"wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV","txRef":"01VGTfmuOM0PhsPI4"}],"errors":[]}

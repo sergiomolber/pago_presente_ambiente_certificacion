@@ -1,0 +1,8 @@
+{
+    "Content-Type": "application/json",
+    "X-Client-IP": "10.130.6.1",
+    "X-Global-Transaction-ID": "dd51bf1b66f2eca200013d70",
+    "WWW-Authenticate": "Bearer error='invalid_token'",
+    "Date": "Tue, 24 Sep 2024 16:45:22 GMT",
+    "Connection": "close"
+}

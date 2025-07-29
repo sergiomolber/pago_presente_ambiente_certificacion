@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "6a2c797d-2dfa-4d55-9560-baa83aebbf53",
+		"name": "Transfiya CALLBACK codigos 200",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29460625",
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/pruebas-presente~2ddec344-6c80-40af-a408-09f9f1b4b366/collection/29460625-6a2c797d-2dfa-4d55-9560-baa83aebbf53?action=share&source=collection_link&creator=29460625"
+	},
+	"item": [
+		{
+			"name": "CALLBACK QA Happy Patch Otros Cod 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// Imprimir el comentario en la consola de Newman\r",
+							"console.log(\"Comentario del caso de prueba: \", pm.iterationData.get(\"comentario\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_callback}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uid",
+						"value": "54605465046"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"sourceBank\": {{sourceBank}},\r\n    \"targetBank\": {{targetBank}},\r\n    \"created\": {{created}},\r\n    \"updated\": {{updated}},\r\n    \"amount\": {{amount}},\r\n    \"symbol\": {{symbol}},\r\n    \"errorCode\": {{errorCode}},\r\n   \"errorDesc\": {{errorDesc}}\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/transfers/01GNiLbwrWFjI6dbl/callback",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"transfers",
+						"01GNiLbwrWFjI6dbl",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

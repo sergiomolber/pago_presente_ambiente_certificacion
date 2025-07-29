@@ -1,0 +1,5 @@
+// Captura la respuesta en formato JSON
+var jsonData = pm.response.json();
+
+// Guarda el access_token en una variable global
+pm.globals.set("access_token_callback", jsonData.access_token);

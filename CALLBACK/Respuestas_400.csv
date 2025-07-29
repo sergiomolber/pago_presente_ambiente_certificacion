@@ -1,0 +1,11 @@
+﻿api-key,transferId,tx_id,status,type,amount,sourceBank,targetBank,comentario
+757ff2d4-d02e-4395-9941-a962ab162e27,"""""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo transferId al enviarlo vacio
+757ff2d4-d02e-4395-9941-a962ab162e27,null,"""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""","""10""","""AG1525AX18""","""AG1525AX17""",transferId*-Validar-campo TX_ID al enviarlo con datos nulos
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""""","""COMPLETED""","""REQUEST""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo tx Id al enviarlo vacio
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""",null,"""COMPLETED""","""REQUEST""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo tx Id al enviarlo con datos nulos
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""BS9UFNPEG3BlTTirV""","""""","""REQUEST""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo status al enviarlo vacio
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""BS9UFNPEG3BlTTirV""",null,"""REQUEST""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo status al enviarlo con datos nulos
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""""","""10""","""AG1525AX18""","""AG1525AX17""",Validar campo type al enviarlo vacio
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""BS9UFNPEG3BlTTirV""","""COMPLETED""",null,"""10""","""AG1525AX18""","""AG1525AX17""",Validar campo type al enviarlo con datos nulos
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""","""10""","""AG1525AX181AG1525AX181AG1525AX181AG1525AX181AG1525AX181AG1525AX18""","""AG1525AX17""",Validar al enviar sourceBank con mas de 64 caracteres
+757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""","""10""","""AG1525AX18""","""AG1525AX181AG1525AX181AG1525AX181AG1525AX181AG1525AX181AG1525AX18""",Validar al enviarlo en targetBank con mas 64 caracteres

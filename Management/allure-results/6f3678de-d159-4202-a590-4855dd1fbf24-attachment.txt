@@ -1,0 +1,1 @@
+{"token_type":"Bearer","access_token":"AAIgOWQ4MTMyZGE1YzYxZjcyMTRlMmM3ZWZjZTZjNmQ0NTVqaeckY8KyF27ZkZsqHJMV6dGEMZgjZel5DbwJH8-tQ2C5DHYLSkK7yCte4uSw455knpWiv4RJRTIG4qo_wNa2R-sQKdLEn5RFuVflbOnapes5yHZrxCuABV0aoQICrAU","scope":"TRANSFERS","expires_in":3600,"consented_on":1746640952}

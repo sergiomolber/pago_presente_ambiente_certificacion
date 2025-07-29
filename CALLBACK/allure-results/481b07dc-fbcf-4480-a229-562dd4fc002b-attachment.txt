@@ -1,0 +1,10 @@
+{
+    "transferId":"dbc977ef-1e72-41cd-ae87-fc8714be383b",
+    "tx_id": "XzwutTb9BlZbefE2N",
+    "status": "COMPLETED",
+    "type": "REQUEST",
+    "created": "2023-11-09T11:56:10-05:00",
+    "updated": "2023-11-09T11:56:23-05:00",
+    "amount": "116400.00",
+    "symbol": "$tin"
+}   

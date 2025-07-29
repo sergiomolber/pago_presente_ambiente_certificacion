@@ -1,0 +1,13 @@
+{
+    "message-uid": "65274d8ea32d7c1c3410a6b2792c277f",
+    "Authorization": "Bearer null",
+    "Content-Type": "text/plain",
+    "User-Agent": "PostmanRuntime/7.39.0",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "1caee615-1f17-4125-b9bb-0cdbb0c72a6b",
+    "Host": "business.transfiya.com.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "292"
+}

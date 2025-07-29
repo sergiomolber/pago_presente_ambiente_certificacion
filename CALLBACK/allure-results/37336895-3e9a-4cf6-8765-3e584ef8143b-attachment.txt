@@ -1,0 +1,12 @@
+{
+    "transferId":"",
+    "tx_id": "BS9UFNPEG3BlTTirV",
+    "status": "COMPLETED",
+    "type": "REQUEST",
+    "created": "2023-12-20T05:58:55.475Z",
+    "updated": "2023-12-20T05:58:55.475Z",
+    "amount": "10",
+    "symbol": "$tin",
+    "errorCode": "1013",
+   "errorDesc": "Prueba"
+}   

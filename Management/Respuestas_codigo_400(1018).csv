@@ -1,0 +1,15 @@
+type,sourceId,transferId,source,target,amount,description,targetBank,merchantId,sourceChannel,sourceIdt,createDate,comentario
+null,null,null,null,null,null,null,null,null,null,null,null,Validar campo type al enviarlo con datos nulos
+"""COLLECTION""",null,null,null,null,null,null,null,null,null,null,null,Validar campo sourceId al enviarlo con datos nulos
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""",null,null,null,null,null,null,null,null,null,Validar campo source al enviarlo con datos nulos
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""",null,null,null,null,null,null,null,null,Validar campo target al enviarlo con datos nulos
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV""",null,null,null,null,null,null,null,Validar campo amount al enviarlo con valores nulos
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV""",100,"""Transferencia pago de compra.""","""AG1525AXCS""","""AG1525AXCS""",null,null,null,Validar campo sourceChannel al enviarlo con datos nulos
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV""",100,"""Transferencia pago de compra.""","""AG1525AXCS""","""AG1525AXCS""","""POS""",null,null,Validar campo sourceId al enviarlo con datos nulos
+"""""",null,null,null,null,null,null,null,null,null,null,null,Validar campo type al enviarlo vacio
+"""COLLECTION""","""""",null,null,null,null,null,null,null,null,null,null,Validar campo sourceId al enviarlo vacio
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""""",null,null,null,null,null,null,null,null,Validar campo source al enviarlo vacio
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""""",null,null,null,null,null,null,null,Validar campo target al enviarlo vacio
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV""","""""",null,null,null,null,null,null,Validar campo amount al enviarlo vacio
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV""",100,"""Transferencia pago de compra.""","""AG1525AXCS""","""AG1525AXCS""","""""",null,null,Validar campo sourceChannel al enviarlo vacio
+"""COLLECTION""","""65c242c3-1ea6-45c4-a71f-a41538ded408""","""{{$randomUUID}}""","""$573003004001""","""wcc7vHUcnYpJcba8eiqEmmARtR3cS1PGfV""",100,"""Transferencia pago de compra.""","""AG1525AXCS""","""AG1525AXCS""","""POS""","""""",null,Validar campo sourceId al enviarlo vacio
