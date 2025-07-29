@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8f3b5b35-bf00-42ac-abfa-6c4841b9dfd2",
-		"name": "Generar token callback",
+		"_postman_id": "bc1421f3-10c3-4fdf-8692-8cbdf2a9424a",
+		"name": "Generar token callback Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29460625",
-		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-8f3b5b35-bf00-42ac-abfa-6c4841b9dfd2?action=share&source=collection_link&creator=29460625"
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-bc1421f3-10c3-4fdf-8692-8cbdf2a9424a?action=share&source=collection_link&creator=29460625"
 	},
 	"item": [
 		{
@@ -69,17 +69,18 @@
 					]
 				},
 				"url": {
-					"raw": "https://business.transfiya.com.co/ach/pib/transfiya-pp-oauth/oauth2/token",
+					"raw": "https://negocios.cert.transfiya.com.co/ach/tx/transfiya-pp-oauth/oauth2/token",
 					"protocol": "https",
 					"host": [
-						"business",
+						"negocios",
+						"cert",
 						"transfiya",
 						"com",
 						"co"
 					],
 					"path": [
 						"ach",
-						"pib",
+						"tx",
 						"transfiya-pp-oauth",
 						"oauth2",
 						"token"

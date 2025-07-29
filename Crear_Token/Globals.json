@@ -3,7 +3,7 @@
 	"values": [
 		{
 			"key": "base-url",
-			"value": "https://negocios.cert.transfiya.com.co/ach/tx",
+			"value": "https://negocios.cert.transfiya.com.co/ach/tx/transfiya-pp-oauth",
 			"type": "default",
 			"enabled": true
 		},

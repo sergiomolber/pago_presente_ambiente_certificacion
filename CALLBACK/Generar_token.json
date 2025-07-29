@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "3f7a5412-9fa6-4970-8c7e-1d2c6dd6eafa",
-		"name": "Generar token management",
+		"_postman_id": "78a7d2f0-9194-4509-a4a9-8d4f3d6c560e",
+		"name": "Generar token management Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29460625",
-		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-3f7a5412-9fa6-4970-8c7e-1d2c6dd6eafa?action=share&source=collection_link&creator=29460625"
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-78a7d2f0-9194-4509-a4a9-8d4f3d6c560e?action=share&source=collection_link&creator=29460625"
 	},
 	"item": [
 		{
@@ -72,14 +72,15 @@
 					"raw": "https://negocios.cert.transfiya.com.co/ach/tx/transfiya-pp-oauth/oauth2/token",
 					"protocol": "https",
 					"host": [
-						"business",
+						"negocios",
+						"cert",
 						"transfiya",
 						"com",
 						"co"
 					],
 					"path": [
 						"ach",
-						"pib",
+						"tx",
 						"transfiya-pp-oauth",
 						"oauth2",
 						"token"
