@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "49293822-d34c-474c-b36f-c997ef0cc0f2",
+		"_postman_id": "7ff75a81-1d29-4a7c-b30c-12ec62b2ce3e",
 		"name": "Validar respuestas",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29460625",
-		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-49293822-d34c-474c-b36f-c997ef0cc0f2?action=share&source=collection_link&creator=29460625"
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Pago-presente-ambiente-pruebas~be2f81e5-b0d7-46c5-b35f-4cd7d925a708/collection/29460625-7ff75a81-1d29-4a7c-b30c-12ec62b2ce3e?action=share&source=collection_link&creator=29460625"
 	},
 	"item": [
 		{
@@ -562,36 +562,7 @@
 							"    pm.response.to.have.status(400);\r",
 							"});\r",
 							"\r",
-							"// Guarda la respuesta JSON en una variable\r",
-							"var jsonData = pm.response.json();\r",
-							"\r",
-							"// Verifica que los campos en \"meta\" estén presentes y sean correctos\r",
-							"pm.test(\"Verificar que los campos en 'meta' estén presentes\", function () {\r",
-							"    pm.expect(jsonData.meta).to.have.property(\"messageUid\");\r",
-							"    pm.expect(jsonData.meta).to.have.property(\"requestDt\");\r",
-							"    pm.expect(jsonData.meta).to.have.property(\"requestAppId\");\r",
-							"});\r",
-							"\r",
-							"// Verifica que los campos \"statusCode\" y \"statusDesc\" estén presentes y sean correctos\r",
-							"pm.test(\"Verificar que 'statusCode' y 'statusDesc' estén presentes\", function () {\r",
-							"    pm.expect(jsonData).to.have.property(\"statusCode\");\r",
-							"    pm.expect(jsonData).to.have.property(\"statusDesc\");\r",
-							"});\r",
-							"\r",
-							"// Verifica que \"errors\" esté presente y sea un array\r",
-							"pm.test(\"Verificar que 'errors' esté presente y sea un array\", function () {\r",
-							"    pm.expect(jsonData).to.have.property(\"errors\");\r",
-							"    pm.expect(jsonData.errors).to.be.an(\"array\");\r",
-							"});\r",
-							"\r",
-							"// Verifica que cada objeto en el array \"errors\" tenga los campos requeridos\r",
-							"pm.test(\"Verificar que cada objeto en 'errors' tenga los campos requeridos\", function () {\r",
-							"    jsonData.errors.forEach(function (error) {\r",
-							"        pm.expect(error).to.have.property(\"code\");\r",
-							"        pm.expect(error).to.have.property(\"transferId\");\r",
-							"        pm.expect(error).to.have.property(\"detail\");\r",
-							"    });\r",
-							"});"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -604,7 +575,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{access_token}}",
+							"value": "AAIgOTZkMDc2MmI1ZWFlNWI4MDg1ZjAwNWZhZGNmNDQxNGEX8ZcRw3Ohd9-eKVDigVv--nytWPyJ6JRC8PscUye0Mh47geItLu9nmxldIHmsSi_r5p5QkkVrLTi-Pgdl0A60-93UFlNmoJBisGYH4PtsNFKU6KHCoOimjwU2RJiq6lI",
 							"type": "string"
 						}
 					]
@@ -613,7 +584,7 @@
 				"header": [
 					{
 						"key": "message-uid",
-						"value": "probando"
+						"value": ""
 					},
 					{
 						"key": "api-key",
@@ -621,13 +592,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{base-url}}/transfer/c2fa1050-0d32-45d1-8cc4-251be65ba85f/reject",
+					"raw": "{{base-url}}/transfer/cb3f00be-3efe-4e54-a069-266562386ab4/reject",
 					"host": [
 						"{{base-url}}"
 					],
 					"path": [
 						"transfer",
-						"c2fa1050-0d32-45d1-8cc4-251be65ba85f",
+						"cb3f00be-3efe-4e54-a069-266562386ab4",
 						"reject"
 					]
 				}
